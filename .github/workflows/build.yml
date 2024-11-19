@@ -43,6 +43,6 @@ jobs:
       - name: Build and analyze
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Alaska-ITS-Sandbox_itext-dotnet-secure-code-review_68971a81-e3e2-484f-8eaa-f8fb78c00b06" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Alaska-ITS-Sandbox_itext-dotnet-secure-code-review_68971a81-e3e2-484f-8eaa-f8fb78c00b06" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarqube.test.alaskaair.com"
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
